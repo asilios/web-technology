@@ -1,0 +1,984 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
+
+
+@media only screen and (min-width: 350px) and (max-width: 991px) {
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.courses_desk {
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  height: 100%;
+}
+
+
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 15px;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background: white;
+  z-index: 4;
+}
+
+.navbar__wrap {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.hamb {
+  display: none;
+}
+
+.popup {
+  display: none;
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu > li > a {
+  text-decoration: none;
+  
+}
+
+.navbar__wrap .menu {
+  display: flex;
+}
+
+.navbar__wrap .menu > li {
+  display: flex;
+  align-items: stretch;
+}
+
+.navbar__wrap .menu > li > a {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar__wrap .menu > li > a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+.navbar__wrap .menu {
+    display: none;
+  }
+
+  .hamb {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamb__field {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 6px auto;
+    background-color: black;
+    transition: 0.2s;
+  }
+
+  .popup {
+    position: fixed;
+    top: 75px;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 100;
+    display: flex;
+    transition: 0.3s;
+  }
+
+  .popup.open {
+    left: 0;
+  }
+
+  .popup .menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 50px 0;
+    overflow: auto;
+  }
+
+  .popup .menu > li {
+    width: 100%;
+  }
+
+  .popup .menu > li > a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3f3f3f;
+  }
+
+  .popup .menu > li > a:hover {
+    background-color: rgba(122, 82, 179, 0.1);
+  }
+
+  .hamb__field.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamb__field.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamb__field.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  body.noscroll {
+    overflow: hidden;
+  }
+  
+  .nav_panel_socials {
+    position: absolute;
+    bottom: 20px;
+  }
+
+  .nav_panel_socials ul li {
+    display: inline-block;
+  }
+
+  .signup_btn {
+    text-align: center;
+    border-radius: 5px;
+    display: block;
+    text-decoration: none;
+    background-color: #04859D;
+    color: white;
+    width: 180px;
+    padding-top: 14px;
+    height: 50px;
+  }
+   
+
+    header {
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+        text-align: center;
+        width: 95vw;
+    }
+    #smth {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: baseline;
+    }
+
+    #smth h1 {
+        font-family: 'Inria Serif', serif;
+        font-size: 40px;
+    }
+
+    #smth h2 {
+        font-size: 15px;
+        font-family: 'Marck Script', cursive;
+        font-weight: 500;
+        border-bottom: 1px solid black;
+        line-height: 4vh;
+    }
+
+    header ul li {
+        list-style: none;
+    }
+
+    .book_pic, .socials {
+        display: none;
+    }
+
+    .image_about {
+        height: 290px;
+        width: 96vw;
+        background: rgba(153, 230, 234,0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image_about img {
+        height: 275px;
+    }
+    .about_text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+      #map {
+        width: 95vw;
+      }
+      #map iframe {
+        width: 95vw;
+      }
+
+      .contact_details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: baseline;
+      }
+
+      .first_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .second_block {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .second_block p {
+        margin-top: 0;
+      }
+      .first_block p {
+        margin-top: 0;
+      }
+
+      #copy {
+        margin-top: 20px;
+        display: block;
+        width: 95vw;
+        text-align: center;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: small;
+      }
+
+      .handwritten {
+        font-family: 'Cedarville Cursive';
+        display: block;
+        width: 95vw;
+        font-size: xx-large;
+        text-align: center;
+      }
+
+      #about {
+        font-family: 'Montserrat';
+      }
+
+      .about_text p {
+        line-height: 33px;
+        font-weight: 300;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .contact_details {
+        font-family: 'Montserrat';
+        font-weight: 400;
+      }
+
+      .contact_details h3 {
+        font-weight: 800;
+      }
+
+      
+      
+      
+      .g_container {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .thumbnails {
+        display: flex;
+        flex-direction: column;
+        line-height: 0;
+      }
+      .thumbnails li {
+        flex: auto;
+      }
+      .thumbnails a {
+        display: block;
+      }
+      .thumbnails img {
+        width: 20vw;
+        height: 20vmin;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: top;
+           object-position: top;
+      }
+      
+      .g_slides {
+        overflow: hidden;
+        width: 70vw;
+        height: 100vmin;
+        padding-left: 0;
+      }
+      .g_slides li {
+        width: 70vw;
+        height: 100vmin;
+        position: absolute;
+        z-index: 1;
+        list-style: none;
+      }
+      .g_slides img {
+        height: 100vmin;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: top;
+           object-position: top;
+      }
+      
+      .g_slides li:target {
+        z-index: 3;
+        -webkit-animation: slide 1s 1;
+      }
+      
+      .g_slides li:not(:target) {
+        -webkit-animation: hidden 1s 1;
+      }
+      
+      @-webkit-keyframes slide {
+        0% {
+          transform: translateY(-30%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
+      
+      @keyframes slide {
+        0% {
+          transform: translateY(-30%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
+      @-webkit-keyframes hidden {
+        0% {
+          z-index: 2;
+        }
+        100% {
+          z-index: 2;
+        }
+      }
+      @keyframes hidden {
+        0% {
+          z-index: 2;
+        }
+        100% {
+          z-index: 2;
+        }
+      }
+
+      #courses {
+        margin-bottom: 50px;
+        background-color: rgba(98, 117, 115, 0.05);
+        
+      }
+
+      .slider {
+        position: relative;
+        height: 70vh;
+        width: 90vw;
+        margin: 50px auto 0;
+        /* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
+        user-select: none;
+        /* Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X */
+        touch-action: pan-y;
+      }
+      
+      /* Если где-то внутри слайдера будут изображения,
+      то нужно задать им pointer-events: none,
+      чтобы они не перетаскивались мышью */
+      
+      .slider img {
+        poiner-events: none;
+      }
+      
+      .slider-list {
+        height: 70vh;
+        width: 90vw;
+        overflow: hidden;
+      }
+      
+      .slider-list.grab {
+        cursor: grab;
+      }
+      
+      .slider-list.grabbing{
+        cursor: grabbing;
+      }
+      
+      .slider-track {
+        display: flex;
+      }
+      
+      .slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 60vh;
+        width: 90vw;
+        text-align: center;
+        margin-right: 3vw;
+        background: #FFFFFF;
+        box-shadow: 0px 23px 34px rgba(35, 57, 55, 0.17);
+        border-radius: 25px;
+        padding: 30px;
+        box-sizing: border-box;
+      }
+      
+      .slider-arrows {
+        margin-top: 15px;
+        text-align: center;
+      }
+      
+      .next,
+      .prev {
+        background: none;
+        border: none;
+        margin: 0 10px;
+        font-size: 30px;
+        cursor: pointer;
+      }
+      
+      .next.disabled,
+      .prev.disabled {
+        opacity: .25;
+        pointer-events: none;
+      }
+
+      .arrow_button {
+        display: none;
+      }
+      
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) 
+@media only screen and (min-width: 600px) {...}
+
+ Medium devices (landscape tablets, 768px and up)
+@media only screen and (min-width: 768px) {...}
+*/
+/*  Large devices (laptops/desktops, 992px and up) */ 
+@media only screen and (min-width: 992px) {
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: baseline;
+      overflow-x: hidden;
+      width: 100vw;
+    }
+    header {
+      display: flex;
+      flex-direction: row;
+      justify-content: baseline;
+      align-items: flex-end;
+      height: 70vh;
+      margin-bottom: 8vh;
+    }
+
+    #smth li {
+      list-style-type: none;
+      margin-bottom: 30px;
+    }
+
+    #smth {
+      height: 50vh;
+    }
+
+    .signup_btn {
+      text-align: center;
+      border-radius: 5px;
+      display: block;
+      text-decoration: none;
+      background-color: #04859D;
+      color: white;
+      width: 13vw;
+      padding-top: 14px;
+      height: 4vh;
+    }
+
+    .arrow_button {
+      width: 11vw;
+      height: 11vw;
+      background-color: #E3EBE7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.5s;
+    }
+
+    .arrow_button:hover {
+      background-color: #cad0cd;
+    }
+
+    .arrow_button a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      box-sizing: border-box;
+      padding-top: 40%;
+    }
+
+    .book_pic {
+      height: 58vh;
+      width: 35vw;
+      background: rgba(168, 233, 235, 0.3);
+      margin-left: 10vw;
+    }
+
+    .book_pic img {
+      height: 58vh;
+      width: 35vw;
+      opacity: 0.5;
+    }
+
+    .socials li {
+      list-style-type: none;
+      margin-bottom: 10px;
+      font-size: large;
+    }
+
+    .socials li a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    #follow_text {
+      writing-mode: vertical-rl;
+    }
+
+    .socials {
+      width: 2vw;
+      margin-left: 0;
+    }
+
+    #about {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: baseline;
+      width: 95vw;
+      position: relative;
+    }
+
+    .about_text {
+      display: flex;
+      flex-direction: row;
+      width: 90vw;
+      height: 35vh;
+    }
+
+    .image_about {
+      width: 28vw;
+      height: 30vh;
+      background-color: rgba(168, 233, 235, 0.3);;
+    }
+    .image_about img {
+      
+      height: 30vh;
+    }
+
+   
+    
+    .g_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      width: 70vw;
+    }
+    
+    .thumbnails {
+      display: flex;
+      flex-direction: column;
+      line-height: 0;
+    }
+    .thumbnails li {
+      flex: auto;
+      list-style-type: none;
+    }
+    .thumbnails a {
+      display: block;
+    }
+    .thumbnails img {
+      width: 30vmin;
+      height: 16vmin;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: top;
+         object-position: top;
+    }
+    
+    .g_slides {
+      overflow: hidden;
+      width: 50vmin;
+      height: 80vmin;
+    }
+    .g_slides li {
+      width: 50vmin;
+      height: 80vmin;
+      position: absolute;
+      z-index: 1;
+      list-style-type: none;
+    }
+    .g_slides img {
+      height: 80vmin;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: top;
+         object-position: top;
+    }
+    
+    .g_slides li:target {
+      z-index: 3;
+      -webkit-animation: slide 1s 1;
+    }
+    
+    .g_slides li:not(:target) {
+      -webkit-animation: hidden 1s 1;
+    }
+    
+    @-webkit-keyframes slide {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
+    }
+    
+    @keyframes slide {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0%);
+      }
+    }
+    @-webkit-keyframes hidden {
+      0% {
+        z-index: 2;
+      }
+      100% {
+        z-index: 2;
+      }
+    }
+    @keyframes hidden {
+      0% {
+        z-index: 2;
+      }
+      100% {
+        z-index: 2;
+      }
+    }
+
+    .slider {
+      display: none;
+    }
+
+    .arrow_button {
+      display: none;
+    }
+
+    .about_text {
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    #first_about_image {
+      position: absolute;
+      left: 6vw;
+      top:0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about_text h2 {
+      position: absolute;
+      right: 18.5vw;
+      top: 2vh;
+      height: 3vh;
+      margin: 0;
+    }
+
+    .about_text p {
+      position: absolute;
+      right: 0;
+      top: 7vh;
+      width: 45vw;
+    }
+
+   
+
+    .second h2 {
+      left: 6vw;
+      top: 2vh;
+    }
+
+    .second p {
+      left: 6vw;
+      top: 7vh;
+    }
+
+    #second_about_image {
+      position: absolute;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    #gallery {
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(98, 117, 115, 0.05);
+      margin-bottom: 0;
+    }
+    
+    #map iframe{
+      width: 44vw;
+      height: 35vh;
+    }
+
+    #map {
+      margin-left: 8vw;
+      position: relative;
+    }
+
+    footer {
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+    }
+
+    .contact_details {
+      margin-left: 15vw;
+      margin-top: 8vh;
+    }
+
+    #copy {
+      margin-top: 15vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #courses {
+      margin-bottom: 50px;
+      padding-bottom: 70px;
+      background-color: rgba(98, 117, 115, 0.05);
+      width: 100vw;
+      height: 60vh;
+      margin-top: 0;
+      font-family: 'Josefin', sans-serif;
+    }
+
+    .handwritten {
+      font-family: 'Cedarville Cursive';
+      display: block;
+      
+      font-size: large;
+      text-align: center;
+    }
+
+    .navbar {
+      position: fixed;
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      z-index: 5;
+      
+    }
+
+    .navbar__wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #logo {
+      margin-left: 5vw;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      margin-left: 11vw;
+      
+    }
+
+    .menu li {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 4.7vw;
+      font-size: 16px;
+      width: 5vw;
+      text-align: center;
+      font-size: small;
+    }
+
+    
+
+    .menu li a {
+      text-decoration: none;
+      color: black;
+  
+      
+      
+    }
+
+    #about_us {
+      position: absolute;
+      writing-mode: vertical-lr;
+
+    }
+
+    #gallery .handwritten, #courses .handwritten {
+      font-size: x-large;
+    }
+
+    #contact_h {
+      position: absolute;
+      writing-mode: vertical-lr;
+      left:43vw;
+    }
+
+    .courses_desk {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .courses_desk .c_card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 45vh;
+      width: 25vw;
+      text-align: center;
+      margin-right: 3vw;
+      background: #FFFFFF;
+      box-shadow: 0px 23px 34px rgba(35, 57, 55, 0.17);
+      border-radius: 25px;
+      padding: 30px;
+      box-sizing: border-box;
+      }
+
+    .c_card h3 {
+      text-align: center;
+    }
+
+    .courses_desk #learn_more {
+      color: black;
+      
+      display: block;
+      writing-mode: vertical-lr;
+    }
+
+    body {
+      font-family: 'Montserrat';
+    }
+
+    #smth h1 {
+      font-family: 'Inria Serif', serif;
+      
+  }
+
+  #smth h2 {
+      text-align: center;
+      font-family: 'Marck Script', cursive;
+      font-weight: 500;
+      border-bottom: 1px solid black;
+      
+  }
+
+
+
+    
+}
+
+/*  Extra large devices (large laptops and desktops, 1200px and up) 
+@media only screen and (min-width: 1200px) {...}  */
+
+
+@font-face {
+    font-family: "SweetMavka"; 
+    src: url("../fonts/Sweet Mavka Script.otf"); 
+    src: url("../fonts/sweet_mavka_script.woff") format("woff"), 
+    url("../fonts/sweet_mavka_script-webfont.woff2") format("woff2"); 
+    font-style: normal; 
+    font-weight: normal; 
+    }
